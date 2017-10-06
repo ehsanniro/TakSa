@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private GoogleMap mMap;
 
+
     boolean mLocationPermissionGranted=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
