@@ -29,5 +29,6 @@ dependencies {
     compile 'com.google.android.gms:play-services:10.2.6'
     //sha1:  C3:7E:5B:33:42:DC:BE:A2:B6:AF:71:3E:2B:88:9B:65:E7:53:0F:CD
     compile 'com.google.android.gms:play-services-maps:10.2.6'
+    //compile 'com.google.android.gms:play-services-maps:44.0.0'
 
 }

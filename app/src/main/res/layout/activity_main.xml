@@ -9,6 +9,8 @@
     tools:context="com.saveh.ehsanniro.taksa.MainActivity" />
     <!--
 
+
+
     <fragment
 
     android:id="@+id/mapid"
