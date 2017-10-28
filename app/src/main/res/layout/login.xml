@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="35sp"
+    android:paddingRight="35sp"
+    android:paddingTop="70sp" >
+
+    <!-- Sample Dashboard screen with Two buttons -->
+    <!-- Button to view all products screen -->
+
+    <TextView
+        android:id="@+id/UserName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="10sp"
+        android:gravity="right"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:text="نام کاربری"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/inputUserName"
+        android:layout_width="fill_parent"
+        android:layout_height="45sp"
+        android:layout_margin="10sp"
+        android:layout_marginBottom="15dip"
+        android:background="@drawable/rounded_corner"
+        android:gravity="left"
+        android:padding="10sp"
+        android:singleLine="true"
+        android:textColor="#cd9358"
+        android:textDirection="rtl" />
+
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:text="رمز عبور  "
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/inputPassword"
+        android:layout_width="fill_parent"
+        android:layout_height="45sp"
+        android:layout_margin="10sp"
+        android:layout_marginBottom="15dip"
+        android:background="@drawable/rounded_corner"
+        android:gravity="left"
+        android:inputType="textPassword"
+        android:padding="10sp"
+        android:textColor="#cd9358"
+        android:textDirection="rtl" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="100sp"
+        android:layout_height="50sp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="30sp"
+        android:background="@drawable/button_"
+        android:paddingLeft="3sp"
+        android:paddingRight="3sp"
+        android:text="ورود"
+        android:textColor="#cd9358" />
+
+    <ListView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Button to create a new product screen -->
+
+</LinearLayout>
