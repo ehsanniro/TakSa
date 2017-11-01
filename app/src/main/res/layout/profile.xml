@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/wallet_highlighted_text_holo_dark"
+    android:orientation="vertical"
+    android:paddingLeft="35sp"
+    android:paddingRight="35sp" >
+
+    <ScrollView
+        android:id="@+id/scrollViewNewClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:text="نام :"
+                android:textColor="#cd9358"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/CustomerFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="5dip"
+                android:layout_marginBottom="15dip"
+                android:layout_weight="1"
+                android:layout_marginRight="10sp"
+                android:enabled="false"
+                android:gravity="right"
+                android:inputType="text"
+                android:paddingRight="10sp"
+                android:singleLine="true"
+                android:textColor="#cd9358"
+                android:textDirection="rtl"
+                android:textSize="35sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:text="نام خانوادگی :"
+                android:textColor="#cd9358"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/CustomerLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="5dip"
+                android:layout_marginBottom="15dip"
+                android:layout_weight="1"
+                android:layout_marginRight="10sp"
+                android:enabled="false"
+                android:gravity="right"
+                android:paddingRight="10sp"
+                android:textColor="#cd9358"
+                android:textDirection="rtl"
+                android:textSize="35sp" />
+
+            <!-- Price Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:text="شماره تلفن :"
+                android:textColor="#cd9358"
+                android:textSize="23sp" />
+
+            <!-- Input Price -->
+
+            <TextView
+                android:id="@+id/PhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="5dip"
+                android:layout_marginBottom="15dip"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="left"
+                android:maxLength="11"
+                android:paddingLeft="10sp"
+                android:singleLine="true"
+                android:textColor="#cd9358"
+                android:textDirection="rtl"
+                android:textSize="35sp" />
+
+            <CheckBox
+                android:id="@+id/IsForMarriage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="1"
+
+                android:button="@drawable/custom_checkbox"
+                android:checked="true"
+                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                android:enabled="false"
+                android:text="برای ازدواج می باشد  "
+                android:textColor="#cd9358"
+                android:textSize="23sp"
+
+
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginTop="10sp"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:text="مبلغ قرارداد ( تومان )"
+                android:textColor="#cd9358"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/CustomerPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="20sp"
+                android:layout_marginTop="15sp"
+                android:background="@drawable/rounded_corner"
+                android:gravity="left"
+                android:inputType="number"
+                android:paddingLeft="10sp"
+                android:singleLine="true"
+                android:textColor="#cd9358"
+                android:textDirection="rtl"
+                android:textSize="28sp" />
+
+            <!-- Button Create Product -->
+
+            <Button
+                android:id="@+id/ButtonSubmitRequest"
+                android:layout_width="200sp"
+                android:layout_height="50sp"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:paddingLeft="3sp"
+                android:paddingRight="3sp"
+                android:text="ثبت درخواست "
+                android:textColor="#cd9358"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
