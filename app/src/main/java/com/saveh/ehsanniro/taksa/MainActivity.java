@@ -58,6 +58,10 @@ public class MainActivity extends AppCompatActivity
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        Log.d("test1", "test1 ");
+
+
+
     }
     @Override
     public void onPause() {
@@ -72,6 +76,7 @@ public class MainActivity extends AppCompatActivity
     public void onMapReady(GoogleMap map) {
         mMap = map;
         map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        Log.d("test2", "test2 ");
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this,
@@ -79,12 +84,15 @@ public class MainActivity extends AppCompatActivity
                     == PackageManager.PERMISSION_GRANTED) {
                 //Location Permission already granted
                 buildGoogleApiClient();
+                Log.d("test3", "test3 ");
 
                 mGoogleMap.setMyLocationEnabled(true);
+                Log.d("test11", "test11 ");
             } else {
                 //Request Location Permission
                 checkLocationPermission();
             }
+
         }
         // TODO: Before enabling the My Location layer, you must request
         // location permission from the user. This sample does not include
@@ -124,10 +132,12 @@ public class MainActivity extends AppCompatActivity
                 .addApi(LocationServices.API)
                 .build();
         mGoogleApiClient.connect();
+        Log.d("test4", "test4 ");
     }
 
     @Override
     public void onConnected(Bundle bundle) {
+        Log.d("test5", "test5 ");
         mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(1000);
         mLocationRequest.setFastestInterval(1000);
@@ -137,6 +147,7 @@ public class MainActivity extends AppCompatActivity
                 == PackageManager.PERMISSION_GRANTED) {
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
         }
+
     }
 
     @Override
@@ -168,6 +179,7 @@ public class MainActivity extends AppCompatActivity
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     private void checkLocationPermission() {
+        Log.d("test21", "test21 ");
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
 
@@ -206,6 +218,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
+        Log.d("test6", "test6 ");
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 // If request is cancelled, the result arrays are empty.
