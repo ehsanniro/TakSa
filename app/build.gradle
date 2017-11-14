@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.saveh.ehsanniro.taksa"
         minSdkVersion 21
@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -30,5 +31,4 @@ dependencies {
     //sha1:  C3:7E:5B:33:42:DC:BE:A2:B6:AF:71:3E:2B:88:9B:65:E7:53:0F:CD
     compile 'com.google.android.gms:play-services-maps:10.2.6'
     //compile 'com.google.android.gms:play-services-maps:44.0.0'
-
 }

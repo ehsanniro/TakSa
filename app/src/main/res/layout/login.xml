@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-
+    android:background="#fafafa"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
@@ -15,24 +15,24 @@
         android:id="@+id/UserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginTop="128dp"
+
+
         android:gravity="right"
         android:text="نام کاربری"
         android:textSize="28sp"
-
-
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="128dp"
-        android:layout_marginRight="64dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="64dp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputUserName"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/shape"
         android:gravity="left"
         android:padding="10sp"
         android:singleLine="false"
@@ -68,7 +68,7 @@
         android:id="@+id/inputPassword"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/shape"
         android:gravity="left"
         android:inputType="textPassword"
         android:padding="10sp"
@@ -87,15 +87,18 @@
         android:id="@+id/btnLogin"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:background="@drawable/button_"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#1A237E"
         android:paddingLeft="3sp"
         android:paddingRight="3sp"
+
         android:text="ورود"
-        android:textColor="#cd9358"
-        android:layout_marginStart="57dp"
-        tools:layout_editor_absoluteY="339dp"
-        tools:layout_editor_absoluteX="130dp"
-        android:layout_marginTop="8dp"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
     <ListView
