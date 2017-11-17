@@ -36,14 +36,14 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <EditText
+                    <org.droidparts.widget.ClearableEditText
                         android:id="@+id/inputUserName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="50dp"
                         android:layout_marginStart="50dp"
                         android:layout_marginTop="50sp"
-                        android:background="@drawable/edittext_shape"
+
                         android:gravity="center_horizontal"
                         android:hint="تلفن همراه خود را وارد کنید"
                         android:inputType="number"
@@ -51,8 +51,8 @@
                         android:singleLine="true"
                         android:textColor="@color/colorText"
                         android:textDirection="rtl" />
-
-                    <org.droidparts.widget.ClearableEditText
+                    <!--android:background="@drawable/edittext_shape"-->
+                    <!--<org.droidparts.widget.ClearableEditText
                         android:id="@+id/EditTextNationalCode"
                         android:layout_width="200sp"
                         android:layout_marginTop="10sp"
@@ -61,7 +61,7 @@
                         android:drawablePadding="12sp"
                         android:inputType="number"
                         android:textColor="#000000"
-                        android:maxLength="10" />
+                        android:maxLength="10" />-->
                     <Button
                         android:id="@+id/btnLogin"
                         android:layout_width="wrap_content"

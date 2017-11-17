@@ -31,4 +31,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:10.2.6'
     //compile 'com.google.android.gms:play-services-maps:44.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    implementation files('lib/droidparts-2.9.8.jar')
+    implementation files('lib/droidparts-3.0.0.jar')
 }
