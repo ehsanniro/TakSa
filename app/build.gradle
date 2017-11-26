@@ -33,4 +33,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 //    implementation files('lib/droidparts-2.9.8.jar')
     implementation files('lib/droidparts-3.0.0.jar')
+    compile 'com.github.Cielsk:clearable-edittext:0.0.3'
 }

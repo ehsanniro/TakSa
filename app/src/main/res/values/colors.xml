@@ -8,4 +8,6 @@
     <color name="colorPrimaryDark">#004D40</color>
     <color name="colorAccent">#1A237E</color> <!--for titles-->
     <color name="colorText">#FF212121</color>
+    <color name="ButtoncolorText">#fafafa</color>
+    <color name="BackGroundColor">#fafafa</color>
 </resources>

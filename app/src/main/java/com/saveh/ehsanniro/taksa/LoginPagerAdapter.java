@@ -8,10 +8,10 @@ import android.support.v4.app.FragmentStatePagerAdapter;
  * Created by hossein on 18/11/2017.
  */
 
-public class PagerAdapter extends FragmentStatePagerAdapter {
+public class LoginPagerAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
 
-    public PagerAdapter(FragmentManager fm, int NumOfTabs) {
+    public LoginPagerAdapter(FragmentManager fm, int NumOfTabs) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
     }
@@ -21,10 +21,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                TabFragment1 tab1 = new TabFragment1();
+                LoginTabFragment1 tab1 = new LoginTabFragment1();
                 return tab1;
             case 1:
-                TabFragment2 tab2 = new TabFragment2();
+                LoginTabFragment2 tab2 = new LoginTabFragment2();
                 return tab2;
             default:
                 return null;

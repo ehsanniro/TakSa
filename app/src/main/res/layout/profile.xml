@@ -2,136 +2,168 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/wallet_highlighted_text_holo_dark"
+    android:background="@color/BackGroundColor"
     android:orientation="vertical"
-    android:paddingLeft="35sp"
-    android:paddingRight="35sp" >
+    android:paddingLeft="20sp"
+    android:paddingRight="20sp"
+    android:paddingTop="10sp">
 
     <ScrollView
         android:id="@+id/scrollViewNewClass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/CustomerFirstName"
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/BetweenItems"
+                android:orientation="horizontal">
+
+
+            <com.cielyang.android.clearableedittext.ClearableEditText
+                android:id="@+id/CustomerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_margin="5dip"
-                android:layout_marginBottom="15dip"
-                android:layout_marginRight="10sp"
                 android:layout_weight="1"
-                android:enabled="false"
-                android:background="@drawable/edittext_shape"
                 android:gravity="right"
                 android:hint="نام و نام خانوادگی"
                 android:inputType="text"
-                android:paddingRight="10sp"
                 android:singleLine="true"
-                android:textColor="#cd9358"
+                android:textColor="@color/colorText"
                 android:textDirection="rtl"
-                android:textSize="35sp" />
+                android:textSize="@dimen/EditText" />
 
-            <EditText
-                android:drawableRight="@mipmap/ic_launcher"
-                android:id="@+id/CustomerLastName"
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/ic_account_grey600_36dp"/>
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/BetweenItems"
+                android:orientation="horizontal">
+
+            <com.cielyang.android.clearableedittext.ClearableEditText
+                android:id="@+id/CustomerPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_margin="5dip"
-                android:layout_marginBottom="15dip"
-                android:background="@drawable/edittext_shape"
-                android:layout_marginRight="10sp"
                 android:layout_weight="1"
-                android:enabled="false"
+                android:inputType="number"
+                android:hint="تلفن ثابت"
                 android:gravity="right"
-
-                android:paddingRight="10sp"
-                android:textColor="#cd9358"
+                android:textColor="@color/colorText"
                 android:textDirection="rtl"
-                android:textSize="35sp" />
+                android:textSize="@dimen/EditText" />
 
-            <!-- Price Label -->
-
-            <!-- Input Price -->
-
-            <EditText
-                android:id="@+id/PhoneNumber"
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/ic_phone_grey600_36dp"/>
+</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/BetweenItems"
+                android:orientation="horizontal">
+            <com.cielyang.android.clearableedittext.ClearableEditText
+                android:id="@+id/MobileNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_margin="5dip"
                 android:hint="تلفن همراه"
-                android:layout_marginBottom="15dip"
                 android:layout_weight="1"
-                android:enabled="false"
-                android:background="@drawable/edittext_shape"
                 android:gravity="right"
                 android:maxLength="11"
-                android:paddingLeft="10sp"
+                android:inputType="number"
                 android:singleLine="true"
-                android:textColor="#cd9358"
+                android:textColor="@color/colorText"
                 android:textDirection="rtl"
-                android:textSize="35sp" />
+                android:textSize="@dimen/EditText" />
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/ic_cellphone_iphone_grey600_36dp"/>
 
-            <CheckBox
-                android:id="@+id/IsForMarriage"
-                android:layout_width="wrap_content"
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginRight="5sp"
-                android:layout_marginTop="10sp"
-                android:layout_weight="1"
-
-                android:button="@drawable/custom_checkbox"
-                android:checked="true"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:enabled="false"
-                android:text="برای ازدواج می باشد  "
-                android:textColor="#cd9358"
-                android:textSize="23sp"
-
-
-                android:visibility="invisible"/>
+                android:layout_marginTop="@dimen/BetweenItems"
+                android:orientation="horizontal">
 
 
 
-            <EditText
-                android:drawableRight="@mipmap/ic_launcher"
-                android:id="@+id/CustomerPrice"
+                <com.cielyang.android.clearableedittext.ClearableEditText
+                    android:id="@+id/EMail"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/colorText"
+                    android:textDirection="ltr"
+                    android:textSize="@dimen/EditText" />
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/ic_email_outline_grey600_36dp"/>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/BetweenItems"
+            android:orientation="horizontal">
+            <com.cielyang.android.clearableedittext.ClearableEditText
+                android:id="@+id/Address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_marginBottom="20sp"
-                android:layout_marginTop="15sp"
-                android:background="@drawable/rounded_corner"
-                android:gravity="left"
-                android:inputType="number"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:hint="آدرس"
+                android:inputType="text"
                 android:paddingLeft="10sp"
                 android:singleLine="true"
-                android:textColor="#cd9358"
+                android:textColor="@color/colorText"
                 android:textDirection="rtl"
-                android:textSize="28sp" />
+                android:textSize="@dimen/EditText" />
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/ic_map_marker_grey600_36dp"/>
 
             <!-- Button Create Product -->
-
+        </LinearLayout>
             <Button
                 android:id="@+id/ButtonSubmitRequest"
-                android:layout_width="200sp"
-                android:layout_height="50sp"
-                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@drawable/rounded_corner"
-                android:paddingLeft="3sp"
-                android:paddingRight="3sp"
-                android:text="ثبت درخواست "
-                android:textColor="#cd9358"
-                android:textSize="28sp" />
+                android:background="@drawable/button_shape"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:layout_marginTop="@dimen/BetweenItems"
+                android:text="ثبت اطلاعات "
+                android:textColor="@color/ButtoncolorText"
+                android:textSize="@dimen/EditText" />
         </LinearLayout>
     </ScrollView>
 

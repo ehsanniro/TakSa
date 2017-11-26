@@ -17,7 +17,7 @@
             android:layout_marginEnd="50dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="50sp"
-
+            android:drawableRight="@mipmap/ic_phone_black_24dp"
             android:gravity="center_horizontal"
             android:hint="کد خود را وارد کنید "
             android:inputType="number"
