@@ -16,6 +16,13 @@
         tools:context=".MainActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
+    <Button
+        android:id="@+id/tripbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:text="انتخاب مبدا"
+        />
 
     <!-- The navigation drawer -->
     <ListView

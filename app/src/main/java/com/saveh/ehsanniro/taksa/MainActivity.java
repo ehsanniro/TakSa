@@ -4,6 +4,7 @@ package com.saveh.ehsanniro.taksa;
 
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
@@ -11,6 +12,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -47,7 +49,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     Marker mCurrLocationMarker;
     LocationRequest mLocationRequest;
     int numberofmarker=0;
+    int tempfortripbutton=0;
 
+    LatLng latLngbegin;
+    LatLng latLnggoal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,7 +143,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         //Place current location marker
-        LatLng latLng1 = new LatLng(location.getLatitude(), location.getLongitude());
+        final LatLng latLng1 = new LatLng(location.getLatitude(), location.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng1);
         markerOptions.title("موقعیت شما");
@@ -156,7 +161,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
 
-        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+       /* mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
                 marker.remove();
@@ -168,17 +173,51 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onMapClick(LatLng latLng) {
 
+                marker.remove();
+                mMap.addMarker(new MarkerOptions().position(latLng));
+                latLng1 = latLnt;
                 if(numberofmarker<2)
                 {
                     numberofmarker++;
                     //latLng.add(point);
                     //mMap.clear();
-                    mMap.addMarker(new MarkerOptions().position(latLng));
+
                 }
 
             }
         });
+*/
+        final Button tripbutton =  (Button)findViewById(R.id.tripbutton);
+        tripbutton.setOnClickListener(new View.OnClickListener()
+                                      {
+                                          public void onClick(View v) {
+                                              // Perform action on click
+                                              //Intent activityChangeIntent = new Intent(PresentActivity.this, NextActivity.class);
+                                              // currentContext.startActivity(activityChangeIntent);
+                                              //PresentActivity.this.startActivity(activityChangeIntent);
+                                              if(tempfortripbutton==0)
+                                              {
+                                                  latLngbegin = latLng1;
+                                                  tripbutton.setText("انتخاب مقصد");
 
+                                              }
+                                              else if(tempfortripbutton==1)
+                                              {
+                                                  latLnggoal = latLng1;
+                                                  tripbutton.setText("درخواست ماشین");
+                                                  Toast.makeText(MainActivity.this, "فاصله بر اساس متر",
+                                                          Toast.LENGTH_LONG).show();
+
+                                              }
+                                              else if (tempfortripbutton==2)
+                                              {
+                                                  //tripbutton.setText("");
+
+                                              }
+                                          }
+                                      }
+
+        );
     }
 
     @Override
